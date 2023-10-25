@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect</title>
+    <link href="style.css" rel="stylesheet">
+<style>
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: row;
+}
+.jump{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+}
+
+.jump:hover .text{
+    visibility: visible;
+    width: 400px;
+    height: 400px;
+}
+.jump:hover img{
+    transform: scale(1.2);
+    
+}
+.image{
+    width: 400px;
+    height: 400px;
+
+}
+.image img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    transition: .5s ease;
+}
+
+.text{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    opacity: .8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(110, 115, 119);
+    visibility: hidden;
+}
+
+.text button{
+    padding: 6px 9px;
+    border-radius: 15px;
+    border: 1px solid red;
+    cursor: pointer;
+    
+}
+.text button:hover{
+    background-color: crimson;
+    color: white;
+}
+</style>
+</head>
+<body>
+    <div class="jump">
+        <div class="image">
+            <img src="./banner.jpg" alt="image">
+        </div>
+        <div class="text">
+            <button>View Packages</button>
+        </div>
+    </div>
+    <div class="jump">
+        <div class="image">
+            <img src="./banner.jpg" alt="image">
+        </div>
+        <div class="text">
+            <button>View Packages</button>
+        </div>
+    </div>
+    
+</body>
+</html>
